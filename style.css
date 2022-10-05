@@ -1,0 +1,134 @@
+@font-face{
+    font-family: "Quicksand Light";
+    src: url("Font\Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Heboo";
+    src: url("Font\Heebo-VariableFont_wght.ttf") format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: "Quicksand Light", sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 5%;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+h3{
+    font-family: "Heboo", sans-serif;
+    font-size: 4.27vw;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+
+
+p{
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+}
+
+#divHaut{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 18vh auto;
+}
+
+#divHaut > p{
+    width: 40%;
+}
+
+.TxtPortfolio{
+    width: 100%;
+    transform-origin: center;
+    animation: rota 6.5s linear infinite;
+}
+
+#divHaut > div{
+    position: relative;
+    width: 25%;
+}
+
+#divHaut > div > img{
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 50%; 
+    margin-left: 50%; 
+    transform: translateY(-50%) translateX(-50%); 
+    z-index: -1;
+}
+
+.cls-1{
+    fill:#0a0a0a;
+}
+
+@keyframes rota{ 
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+#presentation{
+    margin: 15% 7%;
+    text-align: justify;
+}
+
+#divAmazingIndoor{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#divAmazingIndoor > img{
+    width: 40%;
+    border-radius: 1.16vw;
+}
+
+#divAmazingIndoor > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.pExplication{
+    margin-left: 7%;
+    /* width: 80%; */
+    font-size: 1.7vw;
+    letter-spacing: 4px;
+    line-height: 2.7vw;
+    text-align: justify;
+}
