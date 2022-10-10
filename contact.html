@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <span>Brévin RENAUD</span>
+        <nav>
+            <a href="index.html" class="underline">Home</a>
+            <a href="contact.html" class="underline">Contact</a>
+            <a href="https://github.com/RenaudBrevin" class="underline">Github</a>
+            <a href="https://www.linkedin.com/in/brevin-renaud/" class="underline">Linkedin</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Background -->
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="video/BackgroundVideo.mp4" type="video/mp4">
+        </video>
+        <section id="sectionContact">
+            <form action="">
+                <div>
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div>
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="about">Talk about</label>
+                    <input type="text" id="about" name="about" required>
+                </div>
+                <button type="submit" class="bouton">Send</button>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>
