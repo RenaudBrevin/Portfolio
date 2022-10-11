@@ -3,10 +3,10 @@
     src: url("Font\Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
-/* @font-face {
+@font-face {
     font-family: "Heboo";
     src: url("Font\Heebo-VariableFont_wght.ttf") format("truetype"); /* Marche pas cette merde */
-/* } */
+} 
 
 *{ 
     margin: 0;
@@ -15,6 +15,7 @@
     text-decoration: none;
     color: black;
     font-family: "Quicksand Light", sans-serif;
+    cursor: none;
 }
 
 header{
@@ -44,6 +45,18 @@ main::-webkit-scrollbar {
 
 .aimant{
     scroll-snap-align: start;
+}
+
+
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: absolute;
+    border: 4px solid rgb(255, 255, 255);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 20;
 }
 
 #backgroundVideo {
@@ -84,7 +97,7 @@ nav{
 } */
 
 .underline{
-    cursor: pointer;
+    /* cursor: pointer; */
     background: linear-gradient(to top, black 1px,  transparent 2px) no-repeat left bottom / 0 100%;
     background-size: 100% 0;
 }
@@ -134,13 +147,13 @@ h3{
     margin-bottom: 5%;
 }
 
-p, label{
+p{
     font-size: 3.5vw;
     letter-spacing: 0.93vw;
     line-height: 6.2vw;
 }
 
-input{
+input, label{
     font-size: 2.5vw;
     letter-spacing: 0.2vw;
     line-height: 4vw;
@@ -192,7 +205,7 @@ input{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 #sectionHaut > p{
@@ -222,7 +235,7 @@ input{
 }
 
 .cls-1{
-    fill:#0a0a0a;
+    fill:#000000;
 }
 
 @keyframes rota{ 
@@ -239,7 +252,7 @@ input{
     display: flex;
     align-items: center;
     padding: 0 6vw;
-    height: 100%;
+    height: 100vh;
 }
 
 #presentation{
@@ -247,7 +260,7 @@ input{
 }
 
 #sectionAmazingIndoor{
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -299,11 +312,11 @@ form div{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 85%;
+    width: 70%;
 }
 
 input{
-    width: 60%;
+    width: 65%;
     height: 50%;
     padding: 2% 1%;
     background-color: transparent;
@@ -334,3 +347,40 @@ button:hover{
 }
 
 
+
+
+
+
+/* Loading screen */
+
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+.txtLoad{
+    color: white;
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+}
+
+.txtCitation{
+    color: white;
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+}
+
+.endLoad{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    pointer-events: none;
+}

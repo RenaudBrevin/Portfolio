@@ -9,15 +9,17 @@
 </head>
 <body>
     <header>
-        <span>Brévin RENAUD</span>
+        <a href="index.html">Brévin RENAUD</a>
         <nav>
             <a href="index.html" class="underline">Home</a>
             <a href="contact.html" class="underline">Contact</a>
-            <a href="https://github.com/RenaudBrevin" class="underline">Github</a>
-            <a href="https://www.linkedin.com/in/brevin-renaud/" class="underline">Linkedin</a>
+            <a href="https://github.com/RenaudBrevin" class="underline" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/brevin-renaud/" class="underline" target="_blank">Linkedin</a>
         </nav>
     </header>
     <main>
+        <!-- Cursor -->
+        <div class="cursor"></div>
         <!-- Background -->
         <video autoplay muted loop id="backgroundVideo">
             <source src="video/BackgroundVideo.mp4" type="video/mp4">
@@ -43,7 +45,8 @@
                 <button type="submit" class="bouton">Send</button>
             </form>
         </section>
-
     </main>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
