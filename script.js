@@ -35,7 +35,7 @@ function waitBro(time)  {
 
 async function noLoadScreen(){
     await waitBro(4800);
-    loader.classList.add("endLoad");
+    // loader.classList.add("endLoad");
 }
 
 
