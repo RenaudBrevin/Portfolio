@@ -23,7 +23,7 @@ header{
 }
 
 main{
-    /* overflow-y: scroll; */
+    overflow: hidden;
     /* scroll-snap-type: y mandatory; */
     scroll-behavior: smooth;
     height: 100vh;
@@ -197,7 +197,7 @@ input, label{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 #sectionHaut > p{
@@ -239,12 +239,17 @@ input, label{
     }
 }
 
+.sectionAllContent{
+    height: 100vh;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 700ms ease;
+}
 
 #sectionPresentation{
     display: flex;
     align-items: center;
     padding: 0 6vw;
-    height: 100%;
+    height: 100vh;
 }
 
 #presentation{
@@ -252,7 +257,7 @@ input, label{
 }
 
 #sectionAmazingIndoor{
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
