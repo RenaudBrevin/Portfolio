@@ -28,5 +28,6 @@
     </main>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="javascript/script.js"></script>
+    <script src="javascript/form.js"></script>
 </body>
 </html>
