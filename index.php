@@ -39,8 +39,15 @@
         </div>
 
     </main>
+    <script></script> <!-- Ne pas supprimer (pour le snpa scroll) -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="javascript/script.js"></script>
-    <script src="javascript/snapScroll.js"></script>
+    <script>
+        // Le snap scroll ne s'active que en mode PC (Ne fonctionne pas sans scroll de souris)
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+            var script = document.querySelector("script");
+            script.src = "javascript/snapScroll.js";
+        } 
+    </script>
 </body>
 </html>
