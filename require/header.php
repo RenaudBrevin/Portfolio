@@ -8,14 +8,9 @@
         </nav>
     </header>
     <main>  
-        <!-- Loading screen -->
-        <div class="loading">
-            <span class="txtCitation"></span>
-            <span class="boxPercent"></span>
-        </div>
         <!-- Cursor -->
         <div class="cursor"></div>
-        <!-- Background -->
-        <video autoplay muted loop id="backgroundVideo">
+                <!-- Background -->
+                <video autoplay muted loop id="backgroundVideo">
             <source src="video/BackgroundVideo.mp4" type="video/mp4">
         </video>

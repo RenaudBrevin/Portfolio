@@ -1,0 +1,371 @@
+// #ffcdb2
+// #ffb4a2
+// #e5989b
+// #b5838d
+// #6d6875
+
+@use  "mixins";
+
+$background-color: #ffd4bb;
+$background-color-secondary: #ecc2ab;
+$text-color: #54505e;
+$action-color: #e5989b;
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text-color;
+    font-family: halcom, sans-serif;
+    font-weight: 700;
+}
+
+body{
+    background-color: $background-color;
+}
+
+h1{
+    @include mixins.title(4);
+    margin: 6vw;
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        font-size: 7.2vw;
+        margin: 10vw auto;
+    }
+}
+
+h2{
+    @include mixins.title(3);
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        font-size: 6.2vw;
+    }
+}
+
+.cls-1{
+    fill:none;
+    stroke:$text-color;
+    stroke-miterlimit:10;
+    stroke-width:3px;
+}
+
+.cls-2{
+    stroke:$text-color;
+    fill:transparent;
+    @include mixins.breakpoint($breakpoint-tablet){
+        stroke-width: 2px;
+    }
+}
+
+svg{
+    filter: drop-shadow(4px 7px 2px rgba(0, 0, 0, 0.4));
+}
+
+.light{
+    width: 8vw;
+    position: absolute;
+    top: 0;
+    right: -4vw;
+    z-index: 10;
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        position: fixed;
+        top: -30vw;
+        left: 2vw;
+        width: 12vw;
+    }
+    @include mixins.breakpoint($breakpoint-phone){
+        top: -55vw;
+        left: 0.5vw;
+        width: 15vw;
+    }
+}
+
+.animlight{
+    transform-origin: top;
+    animation: basculement 1s linear;
+}
+
+@keyframes basculement {
+    0%{
+        transform: rotateZ(0);
+    }
+    10%{
+        transform: rotateZ(5deg);
+    }
+    30%{
+        transform: rotateZ(-5deg);
+    }
+    50%{
+        transform: rotateZ(3deg);
+    }
+    70%{
+        transform: rotateZ(-2deg);
+    }
+    90%{
+        transform: rotateZ(1deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+
+main{
+    padding-left: 20%;
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        padding: 0 0 16vh 0;
+    }
+
+    .menu{
+        @include mixins.flexCenterColumn();
+        justify-content: space-evenly;
+        width: 20%;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        animation: openNav 2s both;
+
+        @include mixins.breakpoint($breakpoint-tablet){
+            flex-direction: row;
+            justify-content: space-around;
+            bottom: 0;
+            top: auto;
+            width: 100%;
+            height: 16vh;
+            animation: none;
+            background-color: $background-color;
+
+            background-image: linear-gradient($text-color 100%, rgba(0, 0, 0, 0) 0%);
+            background-position: top left;
+            background-size: 85% 2px;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            @include mixins.flexCenterColumn();
+            justify-content: space-between;
+            height: 55%;
+
+            @include mixins.breakpoint($breakpoint-tablet){
+                flex-direction: row;
+                height: 100%;
+                width: 60%;
+            }
+
+            a{
+                font-weight: 700;
+                font-size: 1.6vw;
+                text-decoration: none;
+                border-bottom: solid 2px $action-color;
+
+                @include mixins.breakpoint($breakpoint-tablet){
+                    font-size: 2.4vw;
+                }
+
+                @include mixins.breakpoint($breakpoint-phone){
+                    font-size: 3.2vw;
+                }
+            }
+        }
+    }
+}
+
+@keyframes openNav {
+    from{
+        top: -25vh;
+        height: 0;
+    }
+    100%{
+        height: 100vh;
+    }
+}
+
+.homeTitle{
+    display: none;
+    text-align: center;
+    @include mixins.breakpoint($breakpoint-tablet){
+        display: block;
+        margin: 12vh auto;
+    }
+    @include mixins.breakpoint($breakpoint-phone){
+        margin: 15vh auto;
+    }
+}
+
+.acrelyc{
+    height: 100vh;
+    background: url("img/samaritaineAcrelycDetour.png")  no-repeat;
+    background-size: 90%;
+    background-position: 50%;
+    
+    @include mixins.breakpoint($breakpoint-tablet){
+        height: 60vw;
+        background-size: 95%;
+        background-position: 50% 10%;
+    }
+
+    @include mixins.breakpoint($breakpoint-phone){
+        height: 40vh;
+        background-size: 100%;
+        background-position: 50%;
+    }
+}
+
+.histoire{
+    @include mixins.flexCenterColumn();
+    width: 68%;
+    margin: auto;
+    margin-bottom: 10vw;
+
+    p{
+        text-align: justify;
+    }
+
+    h2{
+        margin: 6.5vw auto 4vw 2vw;
+        @include mixins.breakpoint($breakpoint-tablet){
+            margin: 12vw auto 7vw 4vw;
+        }
+    }
+
+    h3{
+        @include mixins.title(2.6);
+        margin: 5.5vw auto 3vw 2vw;
+        
+        @include mixins.breakpoint($breakpoint-tablet){
+            font-size: 4vw;
+            margin: 10vw auto 6vw 4vw;
+        }
+        @include mixins.breakpoint($breakpoint-phone){
+            font-size: 6vw;
+        }
+    }
+}
+
+.galerie{
+    @include mixins.flexCenterColumn();
+    margin-bottom: 10vw;
+}
+
+.contentGalerie{
+    display: grid;
+
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 25%;
+
+    width: 86%;
+    height: 200vh; 
+    margin: auto;
+    border-radius: 5px;
+    background-color: $background-color-secondary;
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        padding: 1%;
+        width: 70%;
+        height: auto;
+    }
+
+    @include mixins.breakpoint($breakpoint-phone){
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+        text-align: center;
+        padding: 3.5%;
+        border-radius: 5px;
+    }
+
+    @for $i from 1 through 3 {
+        @for $h from 1 through 4 {
+            img:nth-of-type(#{$i*$h}){
+                @include mixins.grid($i, $h);
+            }
+        }
+    }
+}
+
+.sectionContact{
+    width: 100%;
+    height: 100vh;
+    @include mixins.flexCenterColumn();
+
+    @include mixins.breakpoint($breakpoint-tablet){
+        height: 84vh;
+    }
+
+    form{
+        @include mixins.flexCenterColumn();
+        justify-content: space-around;
+        background-color: $background-color-secondary;
+        width: 60%;
+        height: 80%;
+        margin: auto;
+        border-radius: 5px;
+
+        @include mixins.breakpoint($breakpoint-tablet){
+            width: 70%;
+            height: 80%;
+        }
+
+        @include mixins.breakpoint($breakpoint-phone){
+            width: 80%;
+            height: 60%;
+        }
+
+        div{
+            @include mixins.flexCenterColumn();
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70%;
+            height: 10%;
+
+            input{
+                height: 80%;
+                width: 60%;
+                background-color: transparent;
+                border: none;
+                border-top: 1px solid $text-color;
+                border-bottom: 2px solid $text-color;
+                margin: 0 0 auto auto;
+            }
+        }
+
+        input:focus-visible{
+            outline: unset;
+        }
+
+        button{
+            padding: 2% 6%;
+            @include mixins.title(1.5);
+            color: $text-color;
+            background-color: transparent;
+            border: $action-color 2px solid;
+            border-radius: 5px;
+            box-sizing: content-box;
+        }
+
+        button:hover{
+            background-color: $action-color;
+            transition: .3s;
+        }
+    }
+}
+
+
+
+.dark-mode{
+    background-color: $text-color;
+    color: $background-color;
+}
