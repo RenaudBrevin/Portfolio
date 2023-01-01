@@ -47,7 +47,7 @@ function getNewYPos(add){
 }
 
 content.addEventListener('transitionend', function(){
-    setTimeout(function(){ isAnimating = false; }, 1200);
+    setTimeout(function(){ isAnimating = false; }, 500);
     document.addEventListener('wheel', wheelListener);
 })
 
