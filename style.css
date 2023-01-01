@@ -220,20 +220,20 @@ input, label{
     text-align: justify;
 }
 
-#sectionAmazingIndoor, #sectionSamaritaine{
+#sectionAmazingIndoor, #sectionSamaritaine, #sectionMonExpert{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-#sectionAmazingIndoor > img, #sectionSamaritaine > img{
+#sectionAmazingIndoor > img, #sectionSamaritaine > img, #sectionMonExpert > img{
     width: 48%;
     height: auto;
     border-radius: 1.16vw;
 }
 
-#sectionAmazingIndoor > div, #sectionSamaritaine > div{
+#sectionAmazingIndoor > div, #sectionSamaritaine > div, #sectionMonExpert > div{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -463,7 +463,7 @@ button:hover{
         padding: 0 6vw;
     }
 
-    #sectionAmazingIndoor{
+    #sectionAmazingIndoor, #sectionMonExpert{
         justify-content: space-evenly;
         flex-direction: column-reverse;
     }
@@ -473,11 +473,11 @@ button:hover{
         flex-direction: column;
     }
 
-    #sectionAmazingIndoor > img, #sectionSamaritaine > img{
+    #sectionAmazingIndoor > img, #sectionSamaritaine > img, #sectionMonExpert > img{
         width: 90%;
     }
 
-    #sectionAmazingIndoor > div, #sectionSamaritaine > div{
+    #sectionAmazingIndoor > div, #sectionSamaritaine > div, #sectionMonExpert > div{
         width: 95%;
     }
 

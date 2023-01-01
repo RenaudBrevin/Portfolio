@@ -22,19 +22,20 @@
     <meta name="twitter:description" content="Portfolio of Brévin RENAUD, front-end developer student passionate about web development and UI/UX" />
     <meta name="twitter:image" content="images/PhotoProEdit.png" />
 
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ncc6vpl.css"> <!-- Adobe font -->
     <link rel="icon" href="images/PhotoProEdit.png">
+    <meta name="author" content="Brévin RENAUD">
     <title>Brévin Renaud developer front-end - My portfolio 2023</title> 
 
-    <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+    
+    <!-- Rich Snippet -->
     <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "LocalBusiness",
     "name": "Brévin RENAUD",
-    "image": "https://media-exp1.licdn.com/dms/image/C4E03AQHMW2sAOyubew/profile-displayphoto-shrink_800_800/0/1646689387699?e=1673481600&v=beta&t=d2RPPDvyD9QHkJykpf2_DAXeRkb8m8y4HWiafA0h0vY",
+    "image": "images/PhotoProEdit.png",
     "telephone": "06 11 68 85 67",
     "email": "renaudbrevin@gmail.com",
     "address": {
