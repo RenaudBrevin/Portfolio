@@ -1,0 +1,26 @@
+@mixin grid($columnStart, $rowStart){
+    grid-column-start: $columnStart;
+    // grid-column-end: $columnEnd;
+    grid-row-start: $rowStart;
+    // grid-row-end: $rowEnd;
+}
+
+@mixin flexCenterColumn(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin title($fontSize){
+    font-family: adlery-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $fontSize + vw;
+}
+
+@mixin  breakpoint($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+
