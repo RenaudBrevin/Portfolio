@@ -1,3 +1,5 @@
+<?php $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Brévin RENAUD, front-end developer student passionate about web development and UI/UX" />
-    <link rel="canonical" href="https://brevin-renaud.com">
+    <link rel="canonical" href="<?=$url?>">
 
     <!-- Meta Facebook -->
     <meta property="og:title" content="Brévin Renaud developer front-end - My portfolio 2023"/>
